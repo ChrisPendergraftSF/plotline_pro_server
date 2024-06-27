@@ -4,7 +4,7 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-app.use(cors);
+app.use(cors());
 
 const cloudinary = require("cloudinary").v2;
 
