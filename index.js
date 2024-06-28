@@ -4,17 +4,13 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-
-const corsOptions = {
-    origin: (origin, callback) => {
-        callback(null, true);
-    },
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    allowedHeaders: ["Access-Control-Allow-Origin", "Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
-    credentials: true
-};
-app.options('*', cors(corsOptions));
-app.use(cors(corsOptions));
+const cors = require('cors');
+// Allow all origins
+app.use(cors());
+// Allow specific origin(s)
+app.use(cors({
+    origin: 'https://plotline-pro-client-nmv3ofdfg-jc-pendergrafts-projects.vercel.app/'
+}));
 const cloudinary = require("cloudinary").v2;
 var Backendless = require("backendless");
 const APP_ID = "3398BFA4-37F0-C2F1-FF49-8C94D7254800";
