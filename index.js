@@ -4,13 +4,11 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-
+const cors = require('cors');
 // Allow all origins
-app.use(cors());
+app.use( cors({}),)
 // Allow specific origin(s)
-app.use(cors({
-    origin: 'https://plotline-pro-client.vercel.app/'
-}));
+
 const cloudinary = require("cloudinary").v2;
 var Backendless = require("backendless");
 const APP_ID = "3398BFA4-37F0-C2F1-FF49-8C94D7254800";
