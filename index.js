@@ -1,13 +1,9 @@
 const express = require("express");
-const cors = require("cors")
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-const cors = require('cors');
-// Allow all origins
-app.use( cors({}),)
-// Allow specific origin(s)
+
 
 const cloudinary = require("cloudinary").v2;
 var Backendless = require("backendless");
