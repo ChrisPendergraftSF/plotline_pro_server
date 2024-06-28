@@ -9,7 +9,7 @@ const cors = require('cors');
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-    origin: 'https://plotline-pro-client-nmv3ofdfg-jc-pendergrafts-projects.vercel.app/'
+    origin: 'https://plotline-pro-client.vercel.app/'
 }));
 const cloudinary = require("cloudinary").v2;
 var Backendless = require("backendless");
