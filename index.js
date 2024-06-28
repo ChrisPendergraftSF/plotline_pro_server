@@ -13,12 +13,9 @@ const corsOptions = {
     allowedHeaders: ["Access-Control-Allow-Origin", "Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization"],
     credentials: true
 };
-
 app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
-
 const cloudinary = require("cloudinary").v2;
-
 var Backendless = require("backendless");
 const APP_ID = "3398BFA4-37F0-C2F1-FF49-8C94D7254800";
 const API_KEY = "6FD75662-2CDA-4B89-8783-D26F6CA5B4EB";
